@@ -155,6 +155,7 @@ span.pagelinks {
 </style>
 </head>
 <body>
+	<div align="center">
 	<display:table name="BankUser" pagesize="20" sort="list" export="false"
 		id="display">
 		<%-- <display:setProperty name="export.pdf.filename" value="Banking.pdf"></display:setProperty>
@@ -186,5 +187,6 @@ span.pagelinks {
 			title="Account Balance" paramId="accountBalance"></display:column>
 
 	</display:table>
+	</div>
 </body>
 </html>
