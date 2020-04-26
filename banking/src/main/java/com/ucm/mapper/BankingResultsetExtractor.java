@@ -17,6 +17,7 @@ public class BankingResultsetExtractor {
 		bankUser.setAccountType(r.getString("account_type"));
 		bankUser.setAccountBalance(r.getInt("balance"));
 		bankUser.setCurrency(r.getString("currency"));
+		bankUser.setAccountNumber(r.getLong("account_number"));
 		return bankUser;
 	}
 }

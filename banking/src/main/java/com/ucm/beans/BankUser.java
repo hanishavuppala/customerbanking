@@ -13,6 +13,8 @@ public class BankUser {
 	String accountType;
 	int accountBalance;
 	String currency;
+	int depositAmount;
+	int withdrawAmount;
 
 	public String getFirstName() {
 		return firstName;
@@ -85,5 +87,20 @@ public class BankUser {
 	public void setCurrency(String currency) {
 		this.currency = currency;
 	}
-	
+
+	public int getDepositAmount() {
+		return depositAmount;
+	}
+
+	public void setDepositAmount(int depositAmount) {
+		this.depositAmount = depositAmount;
+	}
+
+	public int getWithdrawAmount() {
+		return withdrawAmount;
+	}
+
+	public void setWithdrawAmount(int withdrawAmount) {
+		this.withdrawAmount = withdrawAmount;
+	}	
 }

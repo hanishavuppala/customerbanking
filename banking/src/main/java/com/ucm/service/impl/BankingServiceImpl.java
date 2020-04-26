@@ -16,4 +16,16 @@ public class BankingServiceImpl implements BankingService {
 	public BankUser searchAccount(BankUser bankUser) {
 		return bankingDao.showmember(bankUser);
 	}
+
+	@Override
+	public boolean doDeposit(String accountNumber,int depositedAmount) {
+		
+		return bankingDao.doDeposit(accountNumber,depositedAmount);
+	}
+
+	@Override
+	public boolean doWithdraw(String accountNumber, int withdrawAmount,int currentBalance) {
+	
+		return bankingDao.doWithdraw(accountNumber,withdrawAmount,currentBalance);
+	}
 }
