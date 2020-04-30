@@ -10,4 +10,6 @@ public interface BankingService {
 
 	boolean doWithdraw(String accountNumber, int withdrawAmount,int currentBalance);
 
+	boolean isValidAccount(String accountNumber);
+
 }

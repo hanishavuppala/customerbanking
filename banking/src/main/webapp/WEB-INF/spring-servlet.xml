@@ -21,7 +21,8 @@
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName"
 			value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost:3306/banking"/>
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/banking" />
 		<property name="username" value="root" />
 		<property name="password" value="" />
 	</bean>
@@ -31,6 +32,8 @@
 			<ref bean="dataBaseConnection" />
 		</property>
 	</bean>
+	<bean id="validator"
+		class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
 	<bean id="NamedParameterJdbcTemplate"
 		class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
 		<constructor-arg ref="dataBaseConnection"></constructor-arg>

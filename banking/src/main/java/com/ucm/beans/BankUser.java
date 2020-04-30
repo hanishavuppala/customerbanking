@@ -1,12 +1,17 @@
 package com.ucm.beans;
 
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
 import org.springframework.stereotype.Component;
 
 @Component
 public class BankUser {
 	String firstName;
 	String lastName;
-	long accountNumber;
+	@Size(min = 3, max = 15, message = "Account Number must be between 3 to 15 characters long")
+	@Pattern(regexp = "^[0-9]*$", message = "Account Number should be numeric only")
+	String accountNumber;
 	String email;
 	String gender;
 	long customerId;
@@ -32,11 +37,11 @@ public class BankUser {
 		this.lastName = lastName;
 	}
 
-	public long getAccountNumber() {
+	public String getAccountNumber() {
 		return accountNumber;
 	}
 
-	public void setAccountNumber(long accountNumber) {
+	public void setAccountNumber(String accountNumber) {
 		this.accountNumber = accountNumber;
 	}
 

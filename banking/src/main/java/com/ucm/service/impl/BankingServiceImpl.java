@@ -14,7 +14,7 @@ public class BankingServiceImpl implements BankingService {
 
 	@Override
 	public BankUser searchAccount(BankUser bankUser) {
-		return bankingDao.showmember(bankUser);
+		return bankingDao.searchAccount(bankUser);
 	}
 
 	@Override
@@ -27,5 +27,11 @@ public class BankingServiceImpl implements BankingService {
 	public boolean doWithdraw(String accountNumber, int withdrawAmount,int currentBalance) {
 	
 		return bankingDao.doWithdraw(accountNumber,withdrawAmount,currentBalance);
+	}
+
+	@Override
+	public boolean isValidAccount(String accountNumber) {
+		
+		return bankingDao.isValidAccount(accountNumber);
 	}
 }

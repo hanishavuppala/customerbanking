@@ -15,7 +15,9 @@
 		<table>
 			<tr>
 				<td><form:label path="accountNumber">Account Number</form:label></td>
-				<td><form:input path="accountNumber" size="15" /></td>
+				<td><form:input path="accountNumber" size="15" />
+				<form:errors path="accountNumber" cssStyle="color:red"></form:errors>
+				</td>
 			</tr>
 			<tr>
 				<td><input type="submit" value="Search Account" /></td>
